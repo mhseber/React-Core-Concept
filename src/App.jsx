@@ -1,11 +1,8 @@
-import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
       <div>
@@ -16,9 +13,37 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>Vite + React</h1>
+      <h1>React Core ConCept</h1>
+      <FreeFire />
+      <Car name="Toyota" />
+      <Car name="Honda" />
+      <Car name="BMW" />
+      <Car name="Mercedes" />
     </>
   );
+}
+
+function FreeFire() {
+  return (
+    <div className="freeFire">
+      <h1>My Favorite Game is Free Fire</h1>
+      <h2>Team : BORZ</h2>
+      <p>Name : TB.SEBER</p>
+      <p>id : 2123744843</p>
+      <p>Roll : Russer</p>
+    </div>
+  );
+}
+
+function Car(props) {
+  return (
+    <div className="myCar">
+      <h1>My Car : {props.name}</h1>
+    </div>
+  );
+}
+function Pet() {
+  return <h1>My Pet is a Cat</h1>;
 }
 
 export default App;
