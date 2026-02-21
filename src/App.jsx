@@ -1,9 +1,12 @@
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
-import ToDo from "./ToDo";
+import Sports from "./Sports";
+// import ToDo from "./ToDo";
 
 function App() {
+  const sports = ["Football", "Cricket", "Basketball", "Tennis", "Hockey"];
+
   return (
     <>
       <div>
@@ -15,16 +18,21 @@ function App() {
         </a>
       </div>
       <h1>React Core ConCept</h1>
+
+      {sports.map((sport) => (
+        <Sports key={sport} sports={sport} />
+      ))}
+
       {/* <FreeFire />
       <Car name="Toyota" />
       <Car name="Honda" />
       <Car name="BMW" />
       <Car name="Mercedes" /> */}
 
-      <ToDo name="JavaScript " isDone={true} />
+      {/* <ToDo name="JavaScript " isDone={true} />
       <ToDo name="React" isDone={true} />
       <ToDo name="CSS" isDone={false} />
-      <ToDo name="HTML" isDone={false} />
+      <ToDo name="HTML" isDone={false} /> */}
     </>
   );
 }
